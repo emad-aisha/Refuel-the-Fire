@@ -1,16 +1,31 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class Click : MonoBehaviour
-{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+[RequireComponent(typeof(RectTransform))]
+public class Click : MonoBehaviour {
+    public delegate void ClickEvent();
+    public event ClickEvent OnClick;
+
+    InputAction clickAction;
+    RectTransform bounds;
+
+    // SETUP
+    void Start() {
+        bounds = GetComponent<RectTransform>();
+        clickAction = InputActionManager.instance.GetAction("Click");
+        clickAction.performed += Clicked;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void OnDisable() {
+        OnClick = null;
+        clickAction.performed -= Clicked;
     }
+
+    // EVENT
+    void Clicked(InputAction.CallbackContext context) {
+        if (RectTransformUtility.RectangleContainsScreenPoint(bounds, context.ReadValue<Vector2>())) {
+            OnClick?.Invoke();
+        }
+    }
+
 }

@@ -1,0 +1,57 @@
+{
+    "version": 1,
+    "name": "UI Input",
+    "maps": [
+        {
+            "name": "UI",
+            "id": "ec35b391-7bd3-4d7e-bc74-210b99cb5ad6",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Value",
+                    "id": "351be978-ecd2-4a96-bc5f-791f0aff0405",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "Mouse Left Click",
+                    "id": "cfae16f1-fcae-467d-9109-57c46fc3867e",
+                    "path": "OneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "2f78fbc3-a186-4db1-88f9-adbc4f4c3b17",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "ef0e09ff-84ab-4b8b-923d-49dcba4edb0b",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
