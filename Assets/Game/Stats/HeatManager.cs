@@ -30,6 +30,9 @@ public class HeatManager : MonoBehaviour {
     }
 
 
+    public void AddBaseValue(float value) { baseValue += value; }
+    public void AddMultiplier(float value) { multiplier += value; }
+
 
     void AddHeat() { totalHeat += baseValue * multiplier; if (totalHeat > 1) totalHeat = 1; }
     void DeathCheck() {

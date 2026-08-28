@@ -4,11 +4,13 @@ using UnityEngine;
 
 [RequireComponent(typeof(Click))]
 public class Upgrade : MonoBehaviour {
-    public enum Type { BasePoints, Multiplier };
+    public enum Type { Points, Heat };
+    public enum SubType { BasePoints, Multiplier };
 
     [Header("Basic Stats")]
     [SerializeField] float cost;
     [SerializeField] Type upgradeType;
+    [SerializeField] SubType upgradeSubtype;
     [SerializeField] float upgradeAmount = 1;
 
     [Header("UI Stuffs")]
@@ -25,9 +27,8 @@ public class Upgrade : MonoBehaviour {
     void BuyUpgrade() {
         if (StatManager.instance.Spend(cost)) {
             switch (upgradeType) {
-                case Type.BasePoints: UpgradeBasePoints(); break;
-                case Type.Multiplier: UpgradeMultiplier(); break;
-                default: Debug.Log("Upgrade not set somehow"); break;
+                case Type.Points: UpgradePoints(); break;
+                case Type.Heat: UpgradeHeat(); break;
             }
 
             Destroy(gameObject);
@@ -39,14 +40,20 @@ public class Upgrade : MonoBehaviour {
 
 
     // UPGRADES
-    void UpgradeBasePoints() {
-        Debug.Log("Bought Base Point Upgrade");
-        StatManager.instance.AddBasePoints((ushort)upgradeAmount);
+    void UpgradePoints() {
+        Debug.Log("Upgrade Points: " + upgradeSubtype.ToString());
+        switch (upgradeSubtype) {
+            case SubType.BasePoints: StatManager.instance.AddBasePoints((ushort)upgradeAmount); break;
+            case SubType.Multiplier: StatManager.instance.AddMultiplier(upgradeAmount); break;
+        }
     }
 
-    void UpgradeMultiplier() {
-        Debug.Log("Bought Multiplier Upgrade");
-        StatManager.instance.AddMultiplier(upgradeAmount);
+    void UpgradeHeat() {
+        Debug.Log("Upgrade Heat: " + upgradeSubtype.ToString());
+        switch (upgradeSubtype) {
+            case SubType.BasePoints: HeatManager.instance.AddBaseValue(upgradeAmount); break;
+            case SubType.Multiplier: HeatManager.instance.AddMultiplier(upgradeAmount); break;
+        }
     }
 
 
