@@ -25,7 +25,6 @@ public class Click : MonoBehaviour {
     void Clicked(InputAction.CallbackContext context) {
         // TODO: add a micro cooldown
         if (RectTransformUtility.RectangleContainsScreenPoint(bounds, context.ReadValue<Vector2>())) {
-            Debug.Log("Clicked: " + name);
             OnClick?.Invoke();
         }
     }

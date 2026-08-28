@@ -19,11 +19,11 @@ public class StatManager : MonoBehaviour {
     // HELPERS
     public void AddPoints() {
         totalPoints += basePoints * multiplier;
-        UIManager.instance.UpdateCurrency((int)totalPoints);
+        UIManager.instance.UpdateCurrency(totalPoints);
     }
 
-    public void UpgradeBasePoints(ushort value) { basePoints += value; }
-    public void UpgradeMultiplier(float value) { multiplier += value; }
+    public void AddBasePoints(ushort value) { basePoints += value; }
+    public void AddMultiplier(float value) { multiplier += value; }
 
     public bool Spend(float cost) {
         if (totalPoints - cost < 0) {
@@ -31,7 +31,7 @@ public class StatManager : MonoBehaviour {
         }
         else {
             totalPoints -= cost;
-            UIManager.instance.UpdateCurrency((int)totalPoints);
+            UIManager.instance.UpdateCurrency(totalPoints);
             return true;
         }
     }

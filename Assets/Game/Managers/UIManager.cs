@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour {
 
     [Header("Currency")]
     [SerializeField] TMP_Text currency;
-    [SerializeField] char moneySymbol = 'c';
+    [SerializeField] public char moneySymbol = 'c';
     [SerializeField] bool addCommas;
 
 
@@ -28,13 +28,16 @@ public class UIManager : MonoBehaviour {
 
 
     public void UpdateHeatBar(float percentFull) { heatBar.fillAmount = percentFull; }
-    public void UpdateCurrency(int amountOfCurrency) {
+    public void UpdateCurrency(float amountOfCurrency) {
+        // TODO: make this NOT show decimals once they reach a specific character length of moneys.
+
         currency.text = addCommas switch {
-            true => $"{amountOfCurrency:N0}", // :N formats for commas and the 0 means no decimal places
+            true => amountOfCurrency.ToString("#,##0.##"),
             _ => amountOfCurrency.ToString()
         };
 
         currency.text += moneySymbol;
     }
+
 
 }
