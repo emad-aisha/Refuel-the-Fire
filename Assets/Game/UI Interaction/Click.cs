@@ -27,6 +27,12 @@ public class Click : MonoBehaviour {
         if (RectTransformUtility.RectangleContainsScreenPoint(bounds, context.ReadValue<Vector2>())) {
             OnClick?.Invoke();
         }
+
+    }
+
+    void OnMouseDown() {
+        // TODO: add a micro cooldown
+        OnClick?.Invoke();
     }
 
 }
