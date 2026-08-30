@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour {
     [Header("Basic Values")]
     [SerializeField] float cap = 2;
     [SerializeField] float moveAmount = 5;
-    [SerializeField] float delay = 1;
+    [SerializeField] float delay = 0.2f;
 
 
     InputAction mousePositionAction;
@@ -18,16 +18,15 @@ public class CameraController : MonoBehaviour {
         mousePositionAction = InputActionManager.instance.GetAction("Mouse Position");
     }
 
-
     void LateUpdate() {
         transform.position = Vector3.SmoothDamp(transform.position, GetNewPosition(), ref currentVelocity, delay);
     }
 
 
     Vector3 GetNewPosition() {
-        Vector3 lerpedPos = new(GetMousePositionAsFloat().x, GetMousePositionAsFloat().y);
+        Vector3 mousePos = new(GetMousePositionAsFloat().x, GetMousePositionAsFloat().y);
 
-        Vector3 originalValue = originalCameraPosition + (lerpedPos * moveAmount);
+        Vector3 originalValue = originalCameraPosition + (mousePos * moveAmount);
         originalValue.x = Mathf.Clamp(originalValue.x, -cap, cap);
         originalValue.y = Mathf.Clamp(originalValue.y, -cap, cap);
 

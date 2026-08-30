@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Click))]
 public class Upgrade : MonoBehaviour {
-    public enum Type { Points, Heat };
+    public enum Type { None = 0, Points = 1, Heat = 2 };
     public enum SubType { BasePoints, Multiplier };
 
     [Header("Basic Stats")]
@@ -19,7 +19,7 @@ public class Upgrade : MonoBehaviour {
 
 
     // SETUP
-    void Start() {
+    virtual protected void Start() {
         GetComponent<Click>().OnClick += BuyUpgrade;
         costText.text = cost.ToString() + UIManager.instance.moneySymbol;
     }

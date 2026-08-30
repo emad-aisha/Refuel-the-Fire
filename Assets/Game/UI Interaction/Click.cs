@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(RectTransform))]
-[RequireComponent(typeof(Animator))]
 public class Click : MonoBehaviour {
     public delegate void ClickEvent();
     public event ClickEvent OnClick;
@@ -15,7 +14,7 @@ public class Click : MonoBehaviour {
         bounds = GetComponent<RectTransform>();
         clickAction = InputActionManager.instance.GetAction("Click");
         clickAction.performed += Clicked;
-        OnClick += SquishTest;
+        OnClick += Squish;
     }
 
     void OnDisable() {
@@ -23,22 +22,13 @@ public class Click : MonoBehaviour {
         clickAction.performed -= Clicked;
     }
 
-    // EVENT
+    // CLICK EVENT
     void Clicked(InputAction.CallbackContext context) {
-        // TODO: add a micro cooldown
-        if (RectTransformUtility.RectangleContainsScreenPoint(bounds, context.ReadValue<Vector2>())) {
-            OnClick?.Invoke();
-        }
-
+        if (RectTransformUtility.RectangleContainsScreenPoint(bounds, context.ReadValue<Vector2>())) OnClick?.Invoke();
     }
+    void OnMouseDown() { OnClick?.Invoke(); }
 
-    void OnMouseDown() {
-        // TODO: add a micro cooldown
-        OnClick?.Invoke();
-    }
+    void Squish() { if (TryGetComponent(out Animator animator)) animator.SetTrigger(Animator.StringToHash("Clicked")); }
 
-    void SquishTest() {
-        GetComponent<Animator>().SetTrigger(Animator.StringToHash("Clicked"));
-    }
 
 }
