@@ -11,7 +11,8 @@ public class Upgrade : MonoBehaviour {
     [SerializeField] float cost;
     [SerializeField] Type upgradeType;
     [SerializeField] SubType upgradeSubtype;
-    [SerializeField] float upgradeAmount = 1;
+    [SerializeField] float upgradeAmount = 0;
+    [SerializeField] Upgrade nextUpgrade = null;
 
     [Header("UI Stuffs")]
     [SerializeField] TMP_Text costText;
@@ -31,7 +32,7 @@ public class Upgrade : MonoBehaviour {
                 case Type.Heat: UpgradeHeat(); break;
             }
 
-            Destroy(gameObject);
+            UpdateData();
         }
         else {
             Debug.Log("Not Enough Money");
@@ -54,6 +55,30 @@ public class Upgrade : MonoBehaviour {
             case SubType.BasePoints: HeatManager.instance.AddBaseValue(upgradeAmount); break;
             case SubType.Multiplier: HeatManager.instance.AddMultiplier(upgradeAmount); break;
         }
+    }
+
+    // getters - for making new self
+    public float GetCost() { return cost; }
+    public new Type GetType() { return upgradeType; }
+    public SubType GetSubType() { return upgradeSubtype; }
+    public float GetUpgradeAmount() { return upgradeAmount; }
+    public Upgrade GetNextUpgrade() { return nextUpgrade; }
+
+
+    void UpdateData() {
+        if (nextUpgrade == null) {
+            Destroy(gameObject);
+            return;
+        }
+
+        //newUpgrade
+        cost = nextUpgrade.GetCost();
+        upgradeType = nextUpgrade.GetType();
+        upgradeSubtype = nextUpgrade.GetSubType();
+        upgradeAmount = nextUpgrade.GetUpgradeAmount();
+        nextUpgrade = nextUpgrade.GetNextUpgrade();
+
+        costText.text = cost.ToString() + UIManager.instance.moneySymbol;
     }
 
 
