@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Click))]
 public class Upgrade : MonoBehaviour {
     public enum Type { None = 0, Points = 1, Heat = 2 };
-    public enum SubType { BasePoints, Multiplier };
+    public enum SubType { BasePoints, Multiplier, DecayRate };
 
     [Header("Basic Stats")]
     [SerializeField] float cost;
@@ -16,6 +16,8 @@ public class Upgrade : MonoBehaviour {
 
     [Header("UI Stuffs")]
     [SerializeField] TMP_Text costText;
+    [SerializeField] TMP_Text titleText;
+    [SerializeField] TMP_Text descText;
 
 
 
@@ -44,7 +46,7 @@ public class Upgrade : MonoBehaviour {
     void UpgradePoints() {
         Debug.Log("Upgrade Points: " + upgradeSubtype.ToString());
         switch (upgradeSubtype) {
-            case SubType.BasePoints: StatManager.instance.AddBasePoints((ushort)upgradeAmount); break;
+            case SubType.BasePoints: StatManager.instance.AddBasePoints(upgradeAmount); break;
             case SubType.Multiplier: StatManager.instance.AddMultiplier(upgradeAmount); break;
         }
     }
@@ -54,16 +56,25 @@ public class Upgrade : MonoBehaviour {
         switch (upgradeSubtype) {
             case SubType.BasePoints: HeatManager.instance.AddBaseValue(upgradeAmount); break;
             case SubType.Multiplier: HeatManager.instance.AddMultiplier(upgradeAmount); break;
+            case SubType.DecayRate: HeatManager.instance.LowerDecay(upgradeAmount); break;
         }
     }
 
     // getters - for making new self
-    public float GetCost() { return cost; }
-    public new Type GetType() { return upgradeType; }
-    public SubType GetSubType() { return upgradeSubtype; }
-    public float GetUpgradeAmount() { return upgradeAmount; }
-    public Upgrade GetNextUpgrade() { return nextUpgrade; }
-
+    public void SetUpgradeData(ref float newCost, ref float newUpgradeAmount, ref Upgrade newNextUpgrade) {
+        newCost = cost;
+        newUpgradeAmount = upgradeAmount;
+        newNextUpgrade = nextUpgrade;
+    }
+    public void SetTypeData(ref Type newType, ref SubType newSubtype) {
+        newType = upgradeType;
+        newSubtype = upgradeSubtype;
+    }
+    public void SetUIData(ref TMP_Text newCostText, ref TMP_Text newTitleText, ref TMP_Text newDescText) {
+        newTitleText.text = titleText.text;
+        newCostText.text = costText.text;
+        newDescText.text = descText.text;
+    }
 
     void UpdateData() {
         if (nextUpgrade == null) {
@@ -71,12 +82,9 @@ public class Upgrade : MonoBehaviour {
             return;
         }
 
-        //newUpgrade
-        cost = nextUpgrade.GetCost();
-        upgradeType = nextUpgrade.GetType();
-        upgradeSubtype = nextUpgrade.GetSubType();
-        upgradeAmount = nextUpgrade.GetUpgradeAmount();
-        nextUpgrade = nextUpgrade.GetNextUpgrade();
+        nextUpgrade.SetTypeData(ref upgradeType, ref upgradeSubtype);
+        nextUpgrade.SetUIData(ref costText, ref titleText, ref descText);
+        nextUpgrade.SetUpgradeData(ref cost, ref upgradeAmount, ref nextUpgrade);
 
         costText.text = cost.ToString() + UIManager.instance.moneySymbol;
     }

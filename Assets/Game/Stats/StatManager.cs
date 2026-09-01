@@ -5,7 +5,7 @@ public class StatManager : MonoBehaviour {
     public static StatManager instance;
 
     [SerializeField] float totalPoints = 0;
-    [SerializeField] uint basePoints = 1;
+    [SerializeField] float basePoints = 1;
     [SerializeField] float multiplier = 1;
 
 
@@ -22,7 +22,7 @@ public class StatManager : MonoBehaviour {
         UIManager.instance.UpdateCurrency(totalPoints);
     }
 
-    public void AddBasePoints(ushort value) { basePoints += value; }
+    public void AddBasePoints(float value) { basePoints += value; }
     public void AddMultiplier(float value) { multiplier += value; }
 
     public bool Spend(float cost) {
