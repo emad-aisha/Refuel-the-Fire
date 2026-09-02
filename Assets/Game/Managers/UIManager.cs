@@ -10,12 +10,14 @@ public class UIManager : MonoBehaviour {
     [SerializeField] public char moneySymbol = 'c';
     [SerializeField] bool addCommas;
 
-
     [Header("Heat")]
     [SerializeField] Image heatBar;
 
 
-    bool ignore;
+    [Header("Heat")]
+    [SerializeField] GameObject sideBook;
+    [SerializeField] int moveAmount;
+
 
     // SETUP
     void Awake() {
@@ -39,5 +41,11 @@ public class UIManager : MonoBehaviour {
         currency.text += moneySymbol;
     }
 
+
+    public void HideSideBook() {
+        sideBook.transform.position += new Vector3(moveAmount, 0);
+
+        moveAmount = -moveAmount;
+    }
 
 }
