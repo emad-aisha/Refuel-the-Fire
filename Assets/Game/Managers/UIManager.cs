@@ -14,9 +14,12 @@ public class UIManager : MonoBehaviour {
     [SerializeField] Image heatBar;
 
 
-    [Header("Heat")]
+    [Header("Side Book")]
     [SerializeField] GameObject sideBook;
     [SerializeField] int moveAmount;
+
+    [SerializeField] GameObject progressPanel;
+    [SerializeField] GameObject upgradePanel;
 
 
     // SETUP
@@ -26,9 +29,10 @@ public class UIManager : MonoBehaviour {
 
         UpdateHeatBar(1);
         UpdateCurrency((int)StatManager.instance.GetPoints());
+        ShowUpgrades();
     }
 
-
+    // heat + currency
     public void UpdateHeatBar(float percentFull) { heatBar.fillAmount = percentFull; }
     public void UpdateCurrency(float amountOfCurrency) {
         // TODO: make this NOT show decimals once they reach a specific character length of moneys.
@@ -42,10 +46,19 @@ public class UIManager : MonoBehaviour {
     }
 
 
-    public void HideSideBook() {
+    // sidebook
+    public void ToggleSideBook() {
         sideBook.transform.position += new Vector3(moveAmount, 0);
-
         moveAmount = -moveAmount;
     }
+    public void ShowProgress() {
+        progressPanel.SetActive(true);
+        upgradePanel.SetActive(false);
+    }
+    public void ShowUpgrades() {
+        upgradePanel.SetActive(true);
+        progressPanel.SetActive(false);
+    }
+
 
 }

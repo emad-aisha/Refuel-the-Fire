@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Click))]
 public class Progress : Upgrade {
 
     [Header("Progression Stats")]
@@ -8,11 +7,10 @@ public class Progress : Upgrade {
 
     override protected void Start() {
         base.Start();
-        GetComponent<Click>().OnClick += BuyObject;
     }
 
 
-    void BuyObject() {
+    public void BuyObject() {
         if (objectToShow != null) objectToShow.SetActive(true);
         Destroy(gameObject);
     }

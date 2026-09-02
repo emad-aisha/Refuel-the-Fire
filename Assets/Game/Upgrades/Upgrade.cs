@@ -2,7 +2,6 @@
 using TMPro;
 using UnityEngine;
 
-[RequireComponent(typeof(Click))]
 public class Upgrade : MonoBehaviour {
     public enum Type { None = 0, Points = 1, Heat = 2 };
     public enum SubType { BasePoints, Multiplier, DecayRate };
@@ -19,11 +18,10 @@ public class Upgrade : MonoBehaviour {
 
     // SETUP
     virtual protected void Start() {
-        GetComponent<Click>().OnClick += BuyUpgrade;
         SetUIData();
     }
 
-    void BuyUpgrade() {
+    public void BuyUpgrade() {
         if (StatManager.instance.Spend(upgradeData.cost)) {
             switch (upgradeData.upgradeType) {
                 case Type.Points: UpgradePoints(); break;
@@ -55,7 +53,7 @@ public class Upgrade : MonoBehaviour {
     }
 
     // getters - for making new self
-    public void SetUIData() {
+    void SetUIData() {
         titleText.text = upgradeData.title;
         costText.text = upgradeData.cost.ToString() + UIManager.instance.moneySymbol;
         descText.text = "\n" + upgradeData.description;
