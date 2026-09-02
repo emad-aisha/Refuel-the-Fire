@@ -32,7 +32,7 @@ public class HeatManager : MonoBehaviour {
 
     public void AddBaseValue(float value) { baseValue += value; }
     public void AddMultiplier(float value) { multiplier += value; }
-    public void LowerDecay(float value) { decayRate -= value; }
+    public void LowerDecay(float value) { decayRate = Mathf.Clamp(decayRate - value, 0, 1); }
 
 
     void AddHeat() { totalHeat += baseValue * multiplier; if (totalHeat > 1) totalHeat = 1; }

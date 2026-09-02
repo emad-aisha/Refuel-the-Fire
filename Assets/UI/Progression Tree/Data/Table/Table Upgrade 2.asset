@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 015ba58ff9ccb8147b9f9ec7fbc46292, type: 3}
-  m_Name: Tent Upgrade 1
+  m_Name: Table Upgrade 2
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
   upgradeType: 0
   upgradeSubtype: 0
   upgradeAmount: 0
-  cost: 50
-  title: Tents
-  description: We need a place to stay after all.
-  nextUpgrade: {fileID: 0}
+  cost: 60
+  title: Chocolate
+  description: We already know where this is going.
+  nextUpgrade: {fileID: 11400000, guid: 32af3a974cc052c4095b068346fd7f61, type: 2}

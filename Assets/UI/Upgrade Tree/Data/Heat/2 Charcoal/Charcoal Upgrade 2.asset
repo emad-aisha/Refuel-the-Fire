@@ -17,5 +17,5 @@ MonoBehaviour:
   upgradeAmount: 0.01
   cost: 150
   title: Charcoals
-  description: Anything for more warmth.
+  description: These will fuel the fire for more warmth.
   nextUpgrade: {fileID: 11400000, guid: 563d69e1b75549a40a86bb01391fd00b, type: 2}

@@ -18,4 +18,4 @@ MonoBehaviour:
   cost: 125
   title: Bigger Rocks
   description: This should be even better than the other rocks.
-  nextUpgrade: {fileID: 0}
+  nextUpgrade: {fileID: 11400000, guid: 4597fc734a8c94348881e850723a88e7, type: 2}

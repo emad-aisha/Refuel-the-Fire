@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015ba58ff9ccb8147b9f9ec7fbc46292, type: 3}
+  m_Name: Sleeping Bags Upgrade 3
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
+  upgradeType: 0
+  upgradeSubtype: 0
+  upgradeAmount: 0
+  cost: 300
+  title: Sleeping Bags
+  description: We have to get enough for everyone.
+  nextUpgrade: {fileID: 11400000, guid: c2d2c62e88901e44ea6e097856ee36ee, type: 2}

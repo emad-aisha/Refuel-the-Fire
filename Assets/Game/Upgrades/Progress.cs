@@ -1,19 +1,31 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Progress : Upgrade {
 
     [Header("Progression Stats")]
-    [SerializeField] GameObject objectToShow;
+    [SerializeField] public List<GameObject> objects;
+    int internalIndex = 0;
 
     override protected void Start() {
         base.Start();
     }
 
 
-    public void BuyObject() {
-        if (objectToShow != null) objectToShow.SetActive(true);
-        Destroy(gameObject);
+    public override void BuyUpgrade() {
+        if (StatManager.instance.Spend(upgradeData.cost)) {
+
+            if (objects[internalIndex] != null) objects[internalIndex].SetActive(true);
+            UpdateData();
+        }
+        else {
+            Debug.Log("Not Enough Money");
+        }
     }
 
 
+    protected override void UpdateData() {
+        base.UpdateData();
+        internalIndex++;
+    }
 }

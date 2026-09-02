@@ -7,7 +7,7 @@ public class Upgrade : MonoBehaviour {
     public enum SubType { BasePoints, Multiplier, DecayRate };
 
     [Header("Basic Stats")]
-    [SerializeField] UpgradeData upgradeData;
+    [SerializeField] protected UpgradeData upgradeData;
 
     [Header("UI Stuffs")]
     [SerializeField] TMP_Text costText;
@@ -21,7 +21,7 @@ public class Upgrade : MonoBehaviour {
         SetUIData();
     }
 
-    public void BuyUpgrade() {
+    public virtual void BuyUpgrade() {
         if (StatManager.instance.Spend(upgradeData.cost)) {
             switch (upgradeData.upgradeType) {
                 case Type.Points: UpgradePoints(); break;
@@ -60,7 +60,7 @@ public class Upgrade : MonoBehaviour {
     }
 
 
-    void UpdateData() {
+    protected virtual void UpdateData() {
         if (upgradeData.nextUpgrade == null) {
             Destroy(gameObject);
             return;

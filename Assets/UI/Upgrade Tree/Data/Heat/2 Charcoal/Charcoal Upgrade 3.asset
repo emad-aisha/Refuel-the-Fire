@@ -17,5 +17,5 @@ MonoBehaviour:
   upgradeAmount: 0.01
   cost: 200
   title: Coals
-  description: Why use charcoals when we could use coal.
+  description: Why use charcoals when we could use coals.
   nextUpgrade: {fileID: 0}
