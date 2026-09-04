@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3905258212633483427
+--- !u!114 &-6691985402775607351
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Forest Shader Material
-  m_Shader: {fileID: -6465566751694194690, guid: 1d4d0666977095f418d7b3fa4d6a706d, type: 3}
+  m_Name: Forest Sway Material
+  m_Shader: {fileID: -6465566751694194690, guid: 8997a68ff1adc354f91c8380a8986e35, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -36,11 +36,11 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTex:
+    - _ForestShader_e60833b2f5e9401ca9a7675cc1c764e7_MainTex_792655347_Texture2D:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleCubemap_5c4d9a49f5354d1fa8111d1318920c74_Cube_1_Cubemap:
+    - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -58,16 +58,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Furthest_Point: 20
-    - _StrengthOfRandomColor: 1
+    - _FixSquish: 0.2
+    - _FurthestPoint: 4
+    - _StrengthOfRandomColor: 3
+    - _SwayStrength: 1
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.6649727, g: 0.9245283, b: 0.57855695, a: 1}
-    - _Color2: {r: 0.21561632, g: 0.8141851, b: 0.99371064, a: 1}
-    - _LeafColor1: {r: 0.098039225, g: 0.20000002, b: 0.1764706, a: 1}
-    - _LeafColor2: {r: 0.14509805, g: 0.3372549, b: 0.18039216, a: 1}
-    - _Stray_Pixel: {r: 0.6745098, g: 0.4666667, b: 0.3372549, a: 1}
-    - _TruckColor1: {r: 0.53333336, g: 0.29411766, b: 0.16862746, a: 1}
-    - _TruckColor2: {r: 0.37647063, g: 0.17254902, b: 0.17254902, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Color1: {r: 0.8666667, g: 0.96862745, b: 0.9019608, a: 1}
+    - _Color2: {r: 0.21568628, g: 0.8156863, b: 0.99215686, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
