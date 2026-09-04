@@ -58,8 +58,8 @@ Material:
     - _Shade: 1
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
-    - _BottomColor: {r: 0.654902, g: 0.46068314, b: 0.23137252, a: 1}
+    - _BottomColor: {r: 0.98039216, g: 0.53892046, b: 0.3294118, a: 1}
     - _Shade: {r: 0, g: 0, b: 0, a: 1}
-    - _TopColor: {r: 0.3445868, g: 0.47601157, b: 0.836478, a: 1}
+    - _TopColor: {r: 0.39312124, g: 0.5201297, b: 0.8742138, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
