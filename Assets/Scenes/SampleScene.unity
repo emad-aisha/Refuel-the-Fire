@@ -8484,8 +8484,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Progress
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 004aeb60039f6e446a497f578ac6442a, type: 2}
+  m_sharedMaterial: {fileID: 4987230622415762830, guid: 004aeb60039f6e446a497f578ac6442a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8509,8 +8509,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 7
+  m_fontSizeBase: 7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -9204,8 +9204,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 004aeb60039f6e446a497f578ac6442a, type: 2}
+  m_sharedMaterial: {fileID: 4987230622415762830, guid: 004aeb60039f6e446a497f578ac6442a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9229,8 +9229,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 7
+  m_fontSizeBase: 7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -10700,8 +10700,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '>'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 004aeb60039f6e446a497f578ac6442a, type: 2}
+  m_sharedMaterial: {fileID: 4987230622415762830, guid: 004aeb60039f6e446a497f578ac6442a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10726,14 +10726,14 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 12
-  m_fontSizeBase: 24
+  m_fontSizeBase: 12
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 12
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 32
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -17212,8 +17212,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00000c
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 004aeb60039f6e446a497f578ac6442a, type: 2}
+  m_sharedMaterial: {fileID: 4987230622415762830, guid: 004aeb60039f6e446a497f578ac6442a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17237,8 +17237,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
-  m_fontSizeBase: 7
+  m_fontSize: 6
+  m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -17260,11 +17260,11 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656b6167696c6b72616d6b6d6b6d
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
-  m_EmojiFallbackSupport: 1
+  m_EmojiFallbackSupport: 0
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -34534,10 +34534,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8929493492590102119, guid: b5824313dd832c54e9635184cec03704, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34566,10 +34562,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1162339919}
     m_Modifications:
-    - target: {fileID: 3130654761015521381, guid: 6b3467d289fab5647bb27e8ff29a5f91, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5021711373492792343, guid: 6b3467d289fab5647bb27e8ff29a5f91, type: 3}
       propertyPath: m_Name
       value: Lanterns
@@ -34789,10 +34781,6 @@ PrefabInstance:
       value: Sticks
       objectReference: {fileID: 0}
     - target: {fileID: 2546025540873202851, guid: 9388f1bfed5d98d44a956c8daa7f0aba, type: 3}
-      propertyPath: objects.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2546025540873202851, guid: 9388f1bfed5d98d44a956c8daa7f0aba, type: 3}
       propertyPath: 'objects.Array.data[0]'
       value: 
       objectReference: {fileID: 755729916}
@@ -34808,10 +34796,6 @@ PrefabInstance:
       propertyPath: 'objects.Array.data[3]'
       value: 
       objectReference: {fileID: 778872227}
-    - target: {fileID: 2546025540873202851, guid: 9388f1bfed5d98d44a956c8daa7f0aba, type: 3}
-      propertyPath: 'objects.Array.data[4]'
-      value: 
-      objectReference: {fileID: 257004123}
     - target: {fileID: 6766037231614499102, guid: 9388f1bfed5d98d44a956c8daa7f0aba, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -35107,10 +35091,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8842631760636139491, guid: d2160f282402fe049a9de408eb7b5152, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35240,10 +35220,6 @@ PrefabInstance:
       propertyPath: 'objects.Array.data[3]'
       value: 
       objectReference: {fileID: 1012289305}
-    - target: {fileID: 1385556663133080248, guid: 58afd664bd38540449d11957e4cc42b5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8739576556267334999, guid: 58afd664bd38540449d11957e4cc42b5, type: 3}
       propertyPath: m_Name
       value: Sleeping Bags
@@ -35561,10 +35537,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1162339919}
     m_Modifications:
-    - target: {fileID: 324534122969303030, guid: 2ab0bcc64deaa964e8d9547c6e544c2e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1169251788808149220, guid: 2ab0bcc64deaa964e8d9547c6e544c2e, type: 3}
       propertyPath: m_Name
       value: Benches
