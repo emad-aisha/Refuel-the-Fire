@@ -17,11 +17,11 @@ public class MainMenuManager : MonoBehaviour {
     bool ignore;
     public void StartGame() { SceneManager.LoadSceneAsync(sceneName); }
 
+
+
     public void ShowOptionsMenu() {
         StartCoroutine(ShowMenu(Menus.Options));
     }
-
-
     public void ShowMainMenu() {
         mainMenu.SetActive(true);
         // put other menus here?
@@ -30,9 +30,17 @@ public class MainMenuManager : MonoBehaviour {
 
 
 
-    [SerializeField] int safety = 500;
+    public void Quit() {
+        if (Application.isEditor) {
+            UnityEditor.EditorApplication.isPlaying = false;
+        }
+        else {
+            Application.Quit();
+        }
+    }
 
 
+    // helpers
     IEnumerator ShowMenu(Menus menuToShow) {
         yield return StartCoroutine(WaitForAnimations());
 
@@ -47,13 +55,11 @@ public class MainMenuManager : MonoBehaviour {
 
     }
 
-    // helper
-
     IEnumerator WaitForAnimations() {
         bool exit = false;
         bool isIdle = false;
 
-        while (!exit && safety > 0) {
+        while (!exit) {
             yield return new WaitForFixedUpdate();
             for (int i = 0; i < buttonAnimations.Count; i++) {
                 isIdle = !buttonAnimations[i].GetCurrentAnimatorStateInfo(0).IsName("Highlighted")
@@ -63,7 +69,6 @@ public class MainMenuManager : MonoBehaviour {
             }
 
             if (isIdle) exit = true;
-            safety--;
         }
 
     }
