@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class MainMenuManager : MonoBehaviour {
 
@@ -24,6 +25,9 @@ public class MainMenuManager : MonoBehaviour {
     }
     public void ShowMainMenu() {
         mainMenu.SetActive(true);
+        for (int i = 0; i < buttonAnimations.Count; i++) {
+            buttonAnimations[i].Play("Normal");
+        }
         // put other menus here?
         optionsMenu.SetActive(false);
     }
@@ -42,8 +46,6 @@ public class MainMenuManager : MonoBehaviour {
 
     // helpers
     IEnumerator ShowMenu(Menus menuToShow) {
-        yield return StartCoroutine(WaitForAnimations());
-
         optionsMenu.SetActive(false);
         mainMenu.SetActive(false);
 
@@ -53,24 +55,7 @@ public class MainMenuManager : MonoBehaviour {
             case Menus.Options: optionsMenu.SetActive(true); break;
         }
 
-    }
-
-    IEnumerator WaitForAnimations() {
-        bool exit = false;
-        bool isIdle = false;
-
-        while (!exit) {
-            yield return new WaitForFixedUpdate();
-            for (int i = 0; i < buttonAnimations.Count; i++) {
-                isIdle = !buttonAnimations[i].GetCurrentAnimatorStateInfo(0).IsName("Highlighted")
-                          && !buttonAnimations[i].GetCurrentAnimatorStateInfo(0).IsName("Pressed");
-
-                if (!isIdle) break;
-            }
-
-            if (isIdle) exit = true;
-        }
-
+        yield break;
     }
 
 }
