@@ -24,7 +24,8 @@ public class MainMenuManager : MonoBehaviour {
     [SerializeField] GameObject soundsMenu;
     [SerializeField] GameObject accessibilityMenu;
     [SerializeField] GameObject screenMenu;
-    enum Menus { None = 0, Main = 1, Options = 2, Sounds = 3, Access = 4, Screen = 5 };
+    [SerializeField] GameObject creditMenu;
+    enum Menus { None = 0, Main = 1, Options = 2, Sounds = 3, Access = 4, Screen = 5, Credits = 6 };
 
     void Awake() {
         if (!loadWorld) StartCoroutine(FadeDuration(fadeTime, waitTime, loadWorld));
@@ -41,6 +42,7 @@ public class MainMenuManager : MonoBehaviour {
     public void ShowSoundsMenu() { ShowMenu(Menus.Sounds); }
     public void ShowAccessibilityMenu() { ShowMenu(Menus.Access); }
     public void ShowScreenMenu() { ShowMenu(Menus.Screen); }
+    public void ShowCreditsMenu() { ShowMenu(Menus.Credits); }
 
     public void Quit() {
 #if UNITY_EDITOR
@@ -58,6 +60,7 @@ public class MainMenuManager : MonoBehaviour {
         soundsMenu.SetActive(false);
         accessibilityMenu.SetActive(false);
         screenMenu.SetActive(false);
+        creditMenu.SetActive(false);
 
         switch (menuToShow) {
             case Menus.None: break;
@@ -66,6 +69,7 @@ public class MainMenuManager : MonoBehaviour {
             case Menus.Sounds: soundsMenu.SetActive(true); break;
             case Menus.Access: accessibilityMenu.SetActive(true); break;
             case Menus.Screen: screenMenu.SetActive(true); break;
+            case Menus.Credits: creditMenu.SetActive(true); break;
         }
 
         for (int i = 0; i < allButtonAnimations.Count; i++) {
