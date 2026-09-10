@@ -1,6 +1,9 @@
 using UnityEngine;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections.Generic;
+using System.Collections;
+using Unity.Mathematics;
 
 public class MainMenuManager : MonoBehaviour {
     readonly int NormalAnimation = Animator.StringToHash("Normal");
@@ -8,6 +11,12 @@ public class MainMenuManager : MonoBehaviour {
     [Header("Start Game")]
     [SerializeField] string sceneName;
     [SerializeField] List<Animator> allButtonAnimations;
+
+    [Header("Fade Data")]
+    [SerializeField] Image fade;
+    [SerializeField] float fadeTime = 1;
+    [SerializeField] float waitTime = 0.5f;
+    [SerializeField] bool loadWorld;
 
     [Header("Menus")]
     [SerializeField] GameObject mainMenu;
@@ -17,8 +26,14 @@ public class MainMenuManager : MonoBehaviour {
     [SerializeField] GameObject screenMenu;
     enum Menus { None = 0, Main = 1, Options = 2, Sounds = 3, Access = 4, Screen = 5 };
 
+    void Awake() {
+        if (!loadWorld) StartCoroutine(FadeDuration(fadeTime, waitTime, loadWorld));
+    }
+
     bool ignore;
-    public void StartGame() { SceneManager.LoadSceneAsync(sceneName); }
+    public void StartGame() {
+        StartCoroutine(FadeDuration(fadeTime, waitTime, loadWorld));
+    }
 
     // menu toggles
     public void ShowOptionsMenu() { ShowMenu(Menus.Options); }
@@ -58,4 +73,22 @@ public class MainMenuManager : MonoBehaviour {
         }
     }
 
+    IEnumerator FadeDuration(float time, float waitTime, bool loadWorld) {
+        float internalTime = 0;
+        float oneMinus = loadWorld ? 0 : 1;
+
+        while (internalTime <= time) {
+            fade.color = new Color(0, 0, 0, math.abs(oneMinus - (internalTime / time)));
+            Debug.Log(fade.color);
+            internalTime += Time.deltaTime;
+            yield return new WaitForSecondsRealtime(Time.deltaTime);
+        }
+        if (loadWorld) fade.color = new Color(0, 0, 0, 1);
+        else fade.color = new Color(0, 0, 0, 0);
+
+        yield return new WaitForSeconds(waitTime);
+
+        if (loadWorld) SceneManager.LoadSceneAsync(sceneName);
+        else Destroy(gameObject);
+    }
 }
