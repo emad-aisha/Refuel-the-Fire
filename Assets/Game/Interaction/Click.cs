@@ -21,7 +21,10 @@ public class Click : MonoBehaviour {
     }
 
 
-    void OnMouseDown() { OnClick?.Invoke(); }
+    void OnMouseDown() {
+        OnClick?.Invoke();
+        AudioManager.instance.PlayClick();
+    }
 
     void Squish() { if (TryGetComponent(out Animator animator)) animator.SetTrigger(Animator.StringToHash("Clicked")); }
 

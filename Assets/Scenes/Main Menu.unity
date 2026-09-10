@@ -5464,7 +5464,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9459002cf40c80b4ca7aa636685c9c4e, type: 3}
   - {fileID: 8300000, guid: 1b363f41166663a459005800ff62c368, type: 3}
   - {fileID: 8300000, guid: 24a5c82a46b27d94499fb0590f3dd8ea, type: 3}
-  clip: {fileID: 8300000, guid: 9fcb22401393c8b45934f97704ecadd3, type: 3}
+  clockClip: {fileID: 8300000, guid: 9fcb22401393c8b45934f97704ecadd3, type: 3}
   minPitch: 0.5
   maxPitch: 0.75
   sfxAudioSource: {fileID: 75573068}

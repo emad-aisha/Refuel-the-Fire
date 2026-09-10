@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour {
 
     [Header("SFX")]
     [SerializeField] List<AudioClip> clickClips;
-    [SerializeField] AudioClip clip;
+    [SerializeField] AudioClip clockClip;
 
     [SerializeField, Range(0, 2)] float minPitch;
     [SerializeField, Range(0, 2)] float maxPitch;
@@ -21,7 +21,7 @@ public class AudioManager : MonoBehaviour {
 
     void Awake() {
         if (instance == null) instance = this;
-        savedSettings = FindAnyObjectByType<SavedSettings>();
+        if (savedSettings == null) savedSettings = FindAnyObjectByType<SavedSettings>();
 
         musicAudioSource.clip = music;
         musicAudioSource.volume = savedSettings.musicVolume;
@@ -37,7 +37,7 @@ public class AudioManager : MonoBehaviour {
 
     public void PlayClock() {
         sfxAudioSource.pitch = Random.Range(minPitch, maxPitch);
-        sfxAudioSource.PlayOneShot(clip, savedSettings.sfxVolume);
+        sfxAudioSource.PlayOneShot(clockClip, savedSettings.sfxVolume);
     }
 
 
