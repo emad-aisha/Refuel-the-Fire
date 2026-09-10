@@ -23,7 +23,9 @@ public class AudioManager : MonoBehaviour {
         if (instance == null) instance = this;
         savedSettings = FindAnyObjectByType<SavedSettings>();
 
-        //musicAudioSource.PlayOneShot(music, savedSettings.musicVolume);
+        musicAudioSource.clip = music;
+        musicAudioSource.volume = savedSettings.musicVolume;
+        musicAudioSource.Play();
     }
 
 

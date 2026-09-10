@@ -1,61 +1,61 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System.Collections;
 using UnityEngine.SceneManagement;
-using Unity.VisualScripting;
 
 public class MainMenuManager : MonoBehaviour {
+    readonly int NormalAnimation = Animator.StringToHash("Normal");
 
     [Header("Start Game")]
     [SerializeField] string sceneName;
-    [SerializeField] List<Animator> buttonAnimations;
+    [SerializeField] List<Animator> allButtonAnimations;
 
     [Header("Menus")]
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject optionsMenu;
-    enum Menus { None = 0, Main = 1, Options = 2 };
+    [SerializeField] GameObject soundsMenu;
+    [SerializeField] GameObject accessibilityMenu;
+    [SerializeField] GameObject screenMenu;
+    enum Menus { None = 0, Main = 1, Options = 2, Sounds = 3, Access = 4, Screen = 5 };
 
     bool ignore;
     public void StartGame() { SceneManager.LoadSceneAsync(sceneName); }
 
-
-
-    public void ShowOptionsMenu() {
-        StartCoroutine(ShowMenu(Menus.Options));
-    }
-    public void ShowMainMenu() {
-        mainMenu.SetActive(true);
-        for (int i = 0; i < buttonAnimations.Count; i++) {
-            buttonAnimations[i].Play("Normal");
-        }
-        // put other menus here?
-        optionsMenu.SetActive(false);
-    }
-
-
+    // menu toggles
+    public void ShowOptionsMenu() { ShowMenu(Menus.Options); }
+    public void ShowMainMenu() { ShowMenu(Menus.Main); }
+    public void ShowSoundsMenu() { ShowMenu(Menus.Sounds); }
+    public void ShowAccessibilityMenu() { ShowMenu(Menus.Access); }
+    public void ShowScreenMenu() { ShowMenu(Menus.Screen); }
 
     public void Quit() {
-        if (Application.isEditor) {
-            UnityEditor.EditorApplication.isPlaying = false;
-        }
-        else {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
             Application.Quit();
-        }
+#endif
     }
 
 
     // helpers
-    IEnumerator ShowMenu(Menus menuToShow) {
+    void ShowMenu(Menus menuToShow) {
         optionsMenu.SetActive(false);
         mainMenu.SetActive(false);
+        soundsMenu.SetActive(false);
+        accessibilityMenu.SetActive(false);
+        screenMenu.SetActive(false);
 
         switch (menuToShow) {
             case Menus.None: break;
             case Menus.Main: mainMenu.SetActive(true); break;
             case Menus.Options: optionsMenu.SetActive(true); break;
+            case Menus.Sounds: soundsMenu.SetActive(true); break;
+            case Menus.Access: accessibilityMenu.SetActive(true); break;
+            case Menus.Screen: screenMenu.SetActive(true); break;
         }
 
-        yield break;
+        for (int i = 0; i < allButtonAnimations.Count; i++) {
+            if (allButtonAnimations[i].isActiveAndEnabled) allButtonAnimations[i].Play(NormalAnimation);
+        }
     }
 
 }
