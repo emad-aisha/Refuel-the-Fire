@@ -83,7 +83,6 @@ public class MainMenuManager : MonoBehaviour {
 
         while (internalTime <= time) {
             fade.color = new Color(0, 0, 0, math.abs(oneMinus - (internalTime / time)));
-            Debug.Log(fade.color);
             internalTime += Time.deltaTime;
             yield return new WaitForSecondsRealtime(Time.deltaTime);
         }

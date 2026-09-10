@@ -1510,6 +1510,7 @@ MonoBehaviour:
   soundsMenu: {fileID: 0}
   accessibilityMenu: {fileID: 0}
   screenMenu: {fileID: 0}
+  creditMenu: {fileID: 0}
 --- !u!114 &219557480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33448,8 +33449,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6d0df92f0df0541971fcf414df2b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StatManager
-  totalPoints: 9999999
-  basePoints: 18
+  totalPoints: 0
+  basePoints: 1
   multiplier: 1
 --- !u!114 &1941670190
 MonoBehaviour:
