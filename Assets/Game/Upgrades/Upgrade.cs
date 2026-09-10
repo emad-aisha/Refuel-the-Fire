@@ -1,7 +1,9 @@
-
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
 
+[RequireComponent(typeof(Button))]
 public class Upgrade : MonoBehaviour {
     public enum Type { None = 0, Points = 1, Heat = 2 };
     public enum SubType { BasePoints, Multiplier, DecayRate };
@@ -9,15 +11,23 @@ public class Upgrade : MonoBehaviour {
     [Header("Basic Stats")]
     [SerializeField] protected UpgradeData upgradeData;
 
-    [Header("UI Stuffs")]
-    [SerializeField] TMP_Text costText;
-    [SerializeField] TMP_Text titleText;
-    [SerializeField] TMP_Text descText;
-
-
+    //[Header("UI Stuffs")]
+    TMP_Text costText;
+    TMP_Text titleText;
+    protected TMP_Text descText;
 
     // SETUP
     virtual protected void Start() {
+        TMP_Text[] texts = GetComponentsInChildren<TMP_Text>();
+        foreach (TMP_Text text in texts) {
+            switch (text.gameObject.name) {
+                case "Title": titleText = text; break;
+                case "Price": costText = text; break;
+                case "Desc": descText = text; break;
+            }
+        }
+
+        GetComponent<Button>().onClick.AddListener(BuyUpgrade);
         SetUIData();
     }
 
@@ -55,8 +65,44 @@ public class Upgrade : MonoBehaviour {
     // getters - for making new self
     void SetUIData() {
         titleText.text = upgradeData.title;
-        costText.text = upgradeData.cost.ToString() + UIManager.instance.moneySymbol;
-        descText.text = "\n" + upgradeData.description;
+        costText.text = upgradeData.cost.ToString() + CurrencyManager.instance.moneySymbol;
+
+        SetDesc();
+    }
+
+    virtual protected void SetDesc() {
+        descText.text = upgradeData.upgradeType switch {
+            Type.Heat => "Heat ",
+            Type.Points => "Base Points ",
+            _ => "N "
+        };
+        descText.text += upgradeData.upgradeSubtype switch {
+            SubType.BasePoints => "",
+            SubType.Multiplier => "Multiplier",
+            SubType.DecayRate => "Decay Rate",
+            _ => "X "
+        };
+
+
+        descText.text += upgradeData.upgradeSubtype switch {
+            SubType.BasePoints => "+",
+            SubType.Multiplier => "->",
+            SubType.DecayRate => "-",
+            _ => "~"
+        };
+        if (upgradeData.upgradeSubtype == SubType.Multiplier) {
+            descText.text += upgradeData.upgradeType switch {
+                Type.Heat => HeatManager.instance.GetMultiplier() + upgradeData.upgradeAmount,
+                Type.Points => HeatManager.instance.GetMultiplier() + upgradeData.upgradeAmount,
+                _ => "null"
+            };
+        }
+        else if (upgradeData.upgradeSubtype == SubType.DecayRate) {
+            descText.text += math.abs(upgradeData.upgradeAmount) * 100; // to make it look better lmao :sob:
+        }
+        else {
+            descText.text += math.abs(upgradeData.upgradeAmount);
+        }
     }
 
 

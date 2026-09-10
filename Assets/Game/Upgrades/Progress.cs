@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class Progress : Upgrade {
 
@@ -14,7 +14,6 @@ public class Progress : Upgrade {
 
     public override void BuyUpgrade() {
         if (StatManager.instance.Spend(upgradeData.cost)) {
-
             if (objects[internalIndex] != null) objects[internalIndex].SetActive(true);
             UpdateData();
         }
@@ -23,9 +22,13 @@ public class Progress : Upgrade {
         }
     }
 
-
     protected override void UpdateData() {
         base.UpdateData();
         internalIndex++;
+    }
+
+
+    override protected void SetDesc() {
+        descText.text = "+1 " + upgradeData.description;
     }
 }

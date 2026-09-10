@@ -25,7 +25,7 @@ public class HeatManager : MonoBehaviour {
     void Update() {
         // todo: make it wait a little before decaying the heat again (looks better + nice)
         totalHeat -= decayRate * Time.deltaTime;
-        UIManager.instance.UpdateHeatBar(totalHeat);
+        CurrencyManager.instance.UpdateHeatBar(totalHeat);
         DeathCheck();
     }
 
@@ -34,6 +34,7 @@ public class HeatManager : MonoBehaviour {
     public void AddMultiplier(float value) { multiplier += value; }
     public void LowerDecay(float value) { decayRate = Mathf.Clamp(decayRate - value, 0, 1); }
 
+    public float GetMultiplier() { return multiplier; }
 
     void AddHeat() { totalHeat += baseValue * multiplier; if (totalHeat > 1) totalHeat = 1; }
     void DeathCheck() {
