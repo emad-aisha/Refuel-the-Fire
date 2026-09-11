@@ -19239,29 +19239,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '== SOUNDS ==
-
-    click sfx1 - that guy
-
-    click sfx12- that other guy
-
-
-    ==
-    FONT ==
-
-    puerto beuno - this guy
-
-
-    == ART ==
-
-    me
-
-
-    == CODE ==
-
-    me
-
-'
+  m_text: "==== SOUNDS ====\nComputer mouse clicks and mouse wheel - by khenshom
+    \nhttps://freesound.org/s/565202/\nLicense: CC0\n\nclick.mp3 - by saha213131\nhttps://freesound.org/s/684505/\nLicense:
+    CC0\n\n\n==== FONT ====\nPorto Buena Font - by Posto Carattere\nhttps://www.1001fonts.com/porto-buena-font.html\nLicense:
+    SIL OFL 1.1\n\n\n==== ART CODE and DIRECTION ====\nme\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8852349bd1b5e574abfc61aeaf307b2a, type: 2}
   m_sharedMaterial: {fileID: 4987230622415762830, guid: 8852349bd1b5e574abfc61aeaf307b2a, type: 2}
@@ -19288,8 +19269,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -28142,29 +28123,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '== SOUNDS ==
-
-    click sfx1 - that guy
-
-    click sfx12- that other guy
-
-
-    ==
-    FONT ==
-
-    puerto beuno - this guy
-
-
-    == ART ==
-
-    me
-
-
-    == CODE ==
-
-    me
-
-'
+  m_text: "==== SOUNDS ====\nComputer mouse clicks and mouse wheel - by khenshom
+    \nhttps://freesound.org/s/565202/\nLicense: CC0\n\nclick.mp3 - by saha213131\nhttps://freesound.org/s/684505/\nLicense:
+    CC0\n\n\n==== FONT ====\nPorto Buena Font - by Posto Carattere\nhttps://www.1001fonts.com/porto-buena-font.html\nLicense:
+    SIL OFL 1.1\n\n\n==== ART CODE and DIRECTION ====\nme\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 004aeb60039f6e446a497f578ac6442a, type: 2}
   m_sharedMaterial: {fileID: 4987230622415762830, guid: 004aeb60039f6e446a497f578ac6442a, type: 2}
@@ -28191,8 +28153,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
