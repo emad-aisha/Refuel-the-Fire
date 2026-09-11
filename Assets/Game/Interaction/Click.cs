@@ -6,6 +6,7 @@ public class Click : MonoBehaviour {
     public delegate void ClickEvent();
     public event ClickEvent OnClick;
 
+    [SerializeField] ParticleSystem particles;
     InputAction clickAction;
     RectTransform bounds;
 
@@ -23,6 +24,11 @@ public class Click : MonoBehaviour {
 
     void OnMouseDown() {
         OnClick?.Invoke();
+        ParticleSystem particleSystem = Instantiate(particles, transform);
+        particleSystem.Play();
+        Destroy(particleSystem.gameObject, 0.5f);
+
+        //particles.Play();
         AudioManager.instance.PlayClick();
     }
 

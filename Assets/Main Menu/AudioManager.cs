@@ -18,6 +18,11 @@ public class AudioManager : MonoBehaviour {
     [SerializeField] AudioClip music;
     [SerializeField] AudioSource musicAudioSource;
 
+    [Header("Ambience")]
+    [SerializeField] AudioClip campfireSounds;
+    [SerializeField] AudioSource campfireSource;
+    [SerializeField] float quietAmount = 0.4f;
+
 
     void Awake() {
         if (instance == null) instance = this;
@@ -26,6 +31,10 @@ public class AudioManager : MonoBehaviour {
         musicAudioSource.clip = music;
         musicAudioSource.volume = savedSettings.musicVolume;
         musicAudioSource.Play();
+
+        campfireSource.clip = campfireSounds;
+        campfireSource.volume = savedSettings.sfxVolume - quietAmount;
+        campfireSource.Play();
     }
 
 
