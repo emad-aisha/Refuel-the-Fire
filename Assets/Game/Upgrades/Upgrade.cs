@@ -103,6 +103,12 @@ public class Upgrade : MonoBehaviour {
         else {
             descText.text += math.abs(upgradeData.upgradeAmount);
         }
+
+        switch (upgradeData.upgradeType) {
+            case Type.Heat: descText.color = SideBookManager.instance.heatColor; break;
+            case Type.Points: descText.color = SideBookManager.instance.bpColor; break;
+        }
+
     }
 
 

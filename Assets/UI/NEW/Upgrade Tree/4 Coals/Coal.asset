@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
   upgradeType: 1
   upgradeSubtype: 1
-  upgradeAmount: 0.5
-  cost: 2000
+  upgradeAmount: 0.25
+  cost: 500
   title: Coal
   description: 
   nextUpgrade: {fileID: 11400000, guid: ba43447e5f75b8d449b45ac3172681e4, type: 2}

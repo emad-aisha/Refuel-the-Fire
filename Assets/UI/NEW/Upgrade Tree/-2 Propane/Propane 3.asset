@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeType: 2
   upgradeSubtype: 1
   upgradeAmount: 0.1
-  cost: 3500
+  cost: 1000
   title: Propane
   description: 
   nextUpgrade: {fileID: 11400000, guid: b06e067b2ea651c479e6405fd8a5deb8, type: 2}

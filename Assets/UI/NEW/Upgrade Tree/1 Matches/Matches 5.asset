@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeType: 1
   upgradeSubtype: 0
   upgradeAmount: 0.5
-  cost: 160
+  cost: 80
   title: Matches
   description: 
   nextUpgrade: {fileID: 11400000, guid: 0b4c81830946f3240966099b7a37e15e, type: 2}

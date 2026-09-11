@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SideBookManager : MonoBehaviour {
+    public static SideBookManager instance;
 
     [Header("Side Book")]
     [SerializeField] GameObject sideBook;
@@ -11,7 +12,11 @@ public class SideBookManager : MonoBehaviour {
     [Header("Tabs")]
     [SerializeField] Image upgradeTabs;
     [SerializeField] Image progressTabs;
-    [SerializeField] Color baseColor;
+    Color baseColor;
+
+    [Header("Upgrade Colors")]
+    [SerializeField] public Color heatColor;
+    [SerializeField] public Color bpColor;
 
     [Header("Panels")]
     [SerializeField] GameObject upgradePanel;
@@ -22,6 +27,8 @@ public class SideBookManager : MonoBehaviour {
 
     // SETUP
     void Awake() {
+        if (!instance) instance = this;
+
         originalPosition = sideBook.transform.position;
         baseColor = progressTabs.color;
 

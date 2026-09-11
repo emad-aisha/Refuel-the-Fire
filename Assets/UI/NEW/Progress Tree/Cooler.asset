@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
   upgradeType: 0
   upgradeSubtype: 0
-  upgradeAmount: 2
-  cost: 750
-  title: Bug Spray
-  description: Bug Spray
+  upgradeAmount: 1
+  cost: 1500
+  title: Cooler
+  description: Cooler with Soda
   nextUpgrade: {fileID: 0}

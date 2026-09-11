@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeType: 1
   upgradeSubtype: 0
   upgradeAmount: 1.5
-  cost: 1000
+  cost: 200
   title: Twigs
   description: 
   nextUpgrade: {fileID: 11400000, guid: 1ec578ad9d949564e8d98437b3c0ef4c, type: 2}

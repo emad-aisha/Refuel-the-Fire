@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeType: 2
   upgradeSubtype: 0
   upgradeAmount: 0.005
-  cost: 600
+  cost: 500
   title: Gasoline
   description: 
   nextUpgrade: {fileID: 11400000, guid: e33695defb68d694c8be2c2d0b80ddcf, type: 2}

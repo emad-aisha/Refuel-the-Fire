@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeType: 2
   upgradeSubtype: 0
   upgradeAmount: 0.005
-  cost: 2500
+  cost: 800
   title: Oxygen
   description: 
   nextUpgrade: {fileID: 11400000, guid: 907384fb1f9ef874ea86830e736aa176, type: 2}

@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeType: 1
   upgradeSubtype: 0
   upgradeAmount: 5
-  cost: 20000
+  cost: 1300
   title: Logs
   description: 
   nextUpgrade: {fileID: 11400000, guid: 1d9f9718156266b4381780d146f422c1, type: 2}

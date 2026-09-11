@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeType: 1
   upgradeSubtype: 1
   upgradeAmount: 0.25
-  cost: 4000
+  cost: 700
   title: Charcoal
   description: 
   nextUpgrade: {fileID: 11400000, guid: 5dbfe9311f58b7d458fc5f19eb5a6fa0, type: 2}

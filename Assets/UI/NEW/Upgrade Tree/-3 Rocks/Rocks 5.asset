@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeType: 2
   upgradeSubtype: 2
   upgradeAmount: 0.01
-  cost: 9000
+  cost: 1200
   title: Rocks
   description: 
   nextUpgrade: {fileID: 0}
