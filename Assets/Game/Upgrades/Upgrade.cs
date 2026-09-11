@@ -17,6 +17,9 @@ public class Upgrade : MonoBehaviour {
     protected TMP_Text descText;
     protected Button button;
 
+    public delegate void BoughtEvent();
+    public static event BoughtEvent OnBuy;
+
     // SETUP
     virtual protected void Start() {
         TMP_Text[] texts = GetComponentsInChildren<TMP_Text>();
@@ -31,13 +34,17 @@ public class Upgrade : MonoBehaviour {
         button = GetComponent<Button>();
         button.onClick.AddListener(BuyUpgrade);
         SetUIData();
+
     }
+
+    void OnEnable() { OnBuy += SetDesc; }
+    void OnDisable() { OnBuy -= SetDesc; }
 
     void LateUpdate() {
         if (StatManager.instance.GetPoints() < upgradeData.cost) {
             button.interactable = false;
         }
-        else {
+        else if (button.interactable != true) {
             button.interactable = true;
         }
     }
@@ -51,6 +58,7 @@ public class Upgrade : MonoBehaviour {
 
             UpdateData();
             AudioManager.instance.PlayClick();
+            OnBuy?.Invoke();
         }
         else {
             Debug.Log("Not Enough Money");
@@ -102,6 +110,7 @@ public class Upgrade : MonoBehaviour {
             SubType.DecayRate => "-",
             _ => "~"
         };
+
         if (upgradeData.upgradeSubtype == SubType.Multiplier) {
             descText.text += upgradeData.upgradeType switch {
                 Type.Heat => HeatManager.instance.GetMultiplier() + upgradeData.upgradeAmount,
@@ -109,8 +118,8 @@ public class Upgrade : MonoBehaviour {
                 _ => "null"
             };
         }
-        else if (upgradeData.upgradeSubtype == SubType.DecayRate) {
-            descText.text += math.abs(upgradeData.upgradeAmount) * 100; // to make it look better lmao :sob:
+        else if ((upgradeData.upgradeSubtype == SubType.BasePoints && upgradeData.upgradeType == Type.Heat) || upgradeData.upgradeSubtype == SubType.DecayRate) {
+            descText.text += math.abs(upgradeData.upgradeAmount) * 100;
         }
         else {
             descText.text += math.abs(upgradeData.upgradeAmount);

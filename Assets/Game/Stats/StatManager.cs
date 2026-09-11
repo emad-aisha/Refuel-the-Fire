@@ -8,13 +8,11 @@ public class StatManager : MonoBehaviour {
     [SerializeField] float basePoints = 1;
     [SerializeField] float multiplier = 1;
 
-
     // SETUP
     void Awake() {
         if (instance == null) instance = this;
         GetComponent<Click>().OnClick += AddPoints;
     }
-
 
     // HELPERS
     public void AddPoints() {
