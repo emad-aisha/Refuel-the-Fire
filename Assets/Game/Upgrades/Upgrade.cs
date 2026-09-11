@@ -15,6 +15,7 @@ public class Upgrade : MonoBehaviour {
     TMP_Text costText;
     TMP_Text titleText;
     protected TMP_Text descText;
+    protected Button button;
 
     // SETUP
     virtual protected void Start() {
@@ -27,8 +28,18 @@ public class Upgrade : MonoBehaviour {
             }
         }
 
-        GetComponent<Button>().onClick.AddListener(BuyUpgrade);
+        button = GetComponent<Button>();
+        button.onClick.AddListener(BuyUpgrade);
         SetUIData();
+    }
+
+    void LateUpdate() {
+        if (StatManager.instance.GetPoints() < upgradeData.cost) {
+            button.interactable = false;
+        }
+        else {
+            button.interactable = true;
+        }
     }
 
     public virtual void BuyUpgrade() {
@@ -39,6 +50,7 @@ public class Upgrade : MonoBehaviour {
             }
 
             UpdateData();
+            AudioManager.instance.PlayClick();
         }
         else {
             Debug.Log("Not Enough Money");
@@ -78,8 +90,8 @@ public class Upgrade : MonoBehaviour {
         };
         descText.text += upgradeData.upgradeSubtype switch {
             SubType.BasePoints => "",
-            SubType.Multiplier => "Multiplier",
-            SubType.DecayRate => "Decay Rate",
+            SubType.Multiplier => "Multiplier ",
+            SubType.DecayRate => "Decay Rate ",
             _ => "X "
         };
 
@@ -93,7 +105,7 @@ public class Upgrade : MonoBehaviour {
         if (upgradeData.upgradeSubtype == SubType.Multiplier) {
             descText.text += upgradeData.upgradeType switch {
                 Type.Heat => HeatManager.instance.GetMultiplier() + upgradeData.upgradeAmount,
-                Type.Points => HeatManager.instance.GetMultiplier() + upgradeData.upgradeAmount,
+                Type.Points => StatManager.instance.GetMultiplier() + upgradeData.upgradeAmount,
                 _ => "null"
             };
         }

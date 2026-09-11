@@ -26,11 +26,13 @@ public class InGameMenuManager : MonoBehaviour {
     // options
     public void ShowOptionsMenu() {
         Time.timeScale = 0;
+        AudioManager.instance.UpdateMusicVolume(savedSettings.musicVolume - 0.1f);
         ShowMenu("FullMenu");
         ShowMenu("Options");
     }
 
     public void HideOptionsMenu() {
+        AudioManager.instance.UpdateMusicVolume(savedSettings.musicVolume);
         Time.timeScale = timescale;
         ShowMenu();
     }

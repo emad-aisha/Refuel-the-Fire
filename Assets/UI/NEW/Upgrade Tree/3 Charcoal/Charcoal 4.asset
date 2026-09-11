@@ -18,4 +18,4 @@ MonoBehaviour:
   cost: 500
   title: Charcoal
   description: 
-  nextUpgrade: {fileID: 11400000, guid: bf31b2772ae6b1a4aa45c2287115966c, type: 2}
+  nextUpgrade: {fileID: 0}

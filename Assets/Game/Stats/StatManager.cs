@@ -20,6 +20,7 @@ public class StatManager : MonoBehaviour {
     public void AddPoints() {
         totalPoints += basePoints * multiplier;
         CurrencyManager.instance.UpdateCurrency(totalPoints);
+        CurrencyManager.instance.PopUpCurrency(basePoints * multiplier);
     }
 
     public void AddBasePoints(float value) { basePoints += value; }

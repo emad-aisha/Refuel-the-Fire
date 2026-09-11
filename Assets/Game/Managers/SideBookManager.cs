@@ -49,6 +49,8 @@ public class SideBookManager : MonoBehaviour {
         else internalMoveAmount = 0;
     }
     public void ShowProgress() {
+        if (internalMoveAmount != 0) { ToggleSideBook(); }
+
         upgradeTabs.color = baseColor - new Color(0.1f, 0.1f, 0.1f, 0);
         progressTabs.color = baseColor;
 
@@ -56,6 +58,8 @@ public class SideBookManager : MonoBehaviour {
         upgradePanel.SetActive(false);
     }
     public void ShowUpgrades() {
+        if (internalMoveAmount != 0) { ToggleSideBook(); }
+
         upgradeTabs.color = baseColor;
         progressTabs.color = baseColor - new Color(0.1f, 0.1f, 0.1f, 0);
 
