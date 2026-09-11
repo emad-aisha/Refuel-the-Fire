@@ -4,11 +4,19 @@ using UnityEngine.SceneManagement;
 public class InGameMenuManager : MonoBehaviour {
     [SerializeField] string mainMenu = "Main Menu";
     [SerializeField] GameObject optionsMenu;
+    SavedSettings savedSettings;
 
     [Header("Options")]
-    [SerializeField] GameObject menu1;
+    [SerializeField] GameObject options;
+    [SerializeField] GameObject sounds;
+    [SerializeField] GameObject screen;
+    [SerializeField] GameObject credit;
+
+    float timescale;
 
     void Awake() {
+        timescale = Time.timeScale;
+        savedSettings = FindAnyObjectByType<SavedSettings>();
         HideOptionsMenu();
     }
 
@@ -16,9 +24,38 @@ public class InGameMenuManager : MonoBehaviour {
     public void ExitToMainMenu() { SceneManager.LoadSceneAsync(mainMenu); }
 
     // options
-    public void ShowOptionsMenu() { optionsMenu.SetActive(true); }
-    public void HideOptionsMenu() { optionsMenu.SetActive(false); }
+    public void ShowOptionsMenu() {
+        Time.timeScale = 0;
+        ShowMenu("FullMenu");
+        ShowMenu("Options");
+    }
+
+    public void HideOptionsMenu() {
+        Time.timeScale = timescale;
+        ShowMenu();
+    }
+
+    public void ShowScreen() { ShowMenu("Screen"); }
+    public void ShowSounds() { ShowMenu("Sounds"); }
+    public void ShowCredits() { ShowMenu("Credits"); }
+    public void ShowOptions() { ShowMenu("Options"); }
 
 
+    void ShowMenu(string title = "") {
+        if (title == "") optionsMenu.SetActive(false);
+        options.SetActive(false);
+        sounds.SetActive(false);
+        screen.SetActive(false);
+        credit.SetActive(false);
+
+        switch (title) {
+            case "FullMenu": optionsMenu.SetActive(true); break;
+            case "Options": options.SetActive(true); break;
+            case "Sounds": sounds.SetActive(true); break;
+            case "Screen": screen.SetActive(true); break;
+            case "Credits": credit.SetActive(true); break;
+            default: break;
+        }
+    }
 
 }

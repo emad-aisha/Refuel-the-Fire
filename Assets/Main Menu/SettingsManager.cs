@@ -15,6 +15,7 @@ public class SettingsManager : MonoBehaviour {
 
     void Awake() {
         if (instance == null) instance = this;
+        if (settingsToUpdate == null) settingsToUpdate = FindAnyObjectByType<SavedSettings>();
 
         UpdateMusicVolume();
         UpdateSFXVolume();
