@@ -1308,11 +1308,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4.5
+  m_fontSize: 5.5
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -1980,11 +1980,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -2793,11 +2793,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -2930,11 +2930,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4.5
+  m_fontSize: 5.5
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -8339,8 +8339,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -8476,8 +8476,8 @@ MonoBehaviour:
   m_fontSize: 4.5
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -8701,11 +8701,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -9146,8 +9146,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -9280,11 +9280,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -10789,8 +10789,8 @@ MonoBehaviour:
   m_fontSize: 4.5
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -11344,8 +11344,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -11688,6 +11688,9 @@ MonoBehaviour:
   m_MultiSelect: 0
   m_Options:
     m_Options:
+    - m_Text: 2560 x 1600
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 1920 x 1080
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13051,11 +13054,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4.5
+  m_fontSize: 5.5
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -13137,13 +13140,13 @@ RectTransform:
   - {fileID: 1041895573}
   - {fileID: 1294728920}
   - {fileID: 1058166892}
-  m_Father: {fileID: 1768150660}
+  m_Father: {fileID: 679819235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -18}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 10}
   m_SizeDelta: {x: 0, y: 10}
-  m_Pivot: {x: 0.5, y: 0}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &601610584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13402,8 +13405,8 @@ MonoBehaviour:
   m_fontSize: 4.5
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -13905,8 +13908,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -14302,11 +14305,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -14476,6 +14479,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 601610583}
   - {fileID: 1697380676}
   - {fileID: 301815627}
   m_Father: {fileID: 1768150660}
@@ -16121,8 +16125,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -16642,11 +16646,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -17356,11 +17360,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -18982,11 +18986,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4.5
+  m_fontSize: 5.5
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -19122,8 +19126,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -19941,11 +19945,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4.5
+  m_fontSize: 5.5
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -20628,8 +20632,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -26055,8 +26059,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -26371,11 +26375,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -26594,8 +26598,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -28192,11 +28196,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -28964,8 +28968,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -29333,11 +29337,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -35012,8 +35016,8 @@ MonoBehaviour:
   m_fontSize: 4.5
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -35780,11 +35784,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4.5
+  m_fontSize: 4.55
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -35869,7 +35873,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.7999878, y: 0}
+  m_AnchoredPosition: {x: 0.8000488, y: 0}
   m_SizeDelta: {x: 2, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1367855341
@@ -37110,8 +37114,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -37690,11 +37694,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -38374,8 +38378,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -38668,11 +38672,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4.5
+  m_fontSize: 5.5
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -39796,11 +39800,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4.5
+  m_fontSize: 4.7
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -40614,11 +40618,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -42800,8 +42804,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -43316,8 +43320,8 @@ MonoBehaviour:
   m_fontSize: 4.5
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -43739,7 +43743,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 601610583}
   - {fileID: 679819235}
   m_Father: {fileID: 451308120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43893,6 +43896,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772658671}
   m_CullTransparentMesh: 1
+--- !u!1 &1774837214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1774837216}
+  - component: {fileID: 1774837215}
+  m_Layer: 0
+  m_Name: TEMP SAVED SETTINGS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1774837215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774837214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48846fd7141d9148ada46fd1d42bde5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SavedSettings
+  musicVolume: 0.3
+  sfxVolume: 0.5
+  width: 2460
+  height: 1600
+  fullscreenToggle: 0
+--- !u!4 &1774837216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774837214}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1776529797
 GameObject:
   m_ObjectHideFlags: 0
@@ -43977,11 +44029,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -44117,8 +44169,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -44203,7 +44255,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.7999878, y: 0}
+  m_AnchoredPosition: {x: 0.8000488, y: 0}
   m_SizeDelta: {x: 2, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1796274215
@@ -44468,11 +44520,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -44608,8 +44660,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -49801,55 +49853,6 @@ Transform:
   - {fileID: 1857562377}
   m_Father: {fileID: 1286610469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1852698083
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1852698085}
-  - component: {fileID: 1852698084}
-  m_Layer: 0
-  m_Name: Temp Saved Settings DONT FORGET TO DELETE
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1852698084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852698083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e48846fd7141d9148ada46fd1d42bde5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SavedSettings
-  musicVolume: 0.3
-  sfxVolume: 0.5
-  width: 1920
-  height: 1080
-  fullscreenToggle: 0
---- !u!4 &1852698085
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852698083}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1857562376
 GameObject:
   m_ObjectHideFlags: 0
@@ -50128,11 +50131,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -50265,11 +50268,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -50496,8 +50499,8 @@ MonoBehaviour:
   m_fontSize: 4.5
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -50999,8 +51002,8 @@ MonoBehaviour:
   m_fontSize: 4.5
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -51821,8 +51824,8 @@ MonoBehaviour:
   m_fontSize: 7
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 4
@@ -51955,11 +51958,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4.5
+  m_fontSize: 5.5
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -52262,8 +52265,8 @@ MonoBehaviour:
   m_fontSize: 4.5
   m_fontSizeBase: 4.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -52388,7 +52391,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!224 &2061094092
 RectTransform:
   m_ObjectHideFlags: 0
@@ -52743,11 +52746,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -53109,11 +53112,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6
   m_fontSizeBase: 7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 6
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 4
   m_fontSizeMax: 10
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -53634,8 +53637,8 @@ SceneRoots:
   - {fileID: 1590945787}
   - {fileID: 519420032}
   - {fileID: 1239835206}
-  - {fileID: 1852698085}
   - {fileID: 127941784}
   - {fileID: 1941670185}
   - {fileID: 1286610469}
   - {fileID: 451308120}
+  - {fileID: 1774837216}

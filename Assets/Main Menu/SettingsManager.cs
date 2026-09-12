@@ -19,7 +19,8 @@ public class SettingsManager : MonoBehaviour {
 
         UpdateMusicVolume();
         UpdateSFXVolume();
-        UpdateResolution();
+        SetResolution();
+        SetFullscreen();
     }
 
 
@@ -41,13 +42,15 @@ public class SettingsManager : MonoBehaviour {
         settingsToUpdate.width = int.Parse(numbers[0]);
         settingsToUpdate.height = int.Parse(numbers[1]);
 
-        Screen.SetResolution(settingsToUpdate.width, settingsToUpdate.height, settingsToUpdate.fullscreenToggle);
+        SetResolution();
     }
+    void SetResolution() { Screen.SetResolution(settingsToUpdate.width, settingsToUpdate.height, settingsToUpdate.fullscreenToggle); }
 
     public void ToggleFullscreen() {
         settingsToUpdate.fullscreenToggle = fullscreenToggle.isOn;
-        Screen.SetResolution(settingsToUpdate.width, settingsToUpdate.height, settingsToUpdate.fullscreenToggle);
+        SetFullscreen();
     }
+    void SetFullscreen() { Screen.SetResolution(settingsToUpdate.width, settingsToUpdate.height, settingsToUpdate.fullscreenToggle); }
 
 
 
