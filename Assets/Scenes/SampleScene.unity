@@ -26847,7 +26847,7 @@ MonoBehaviour:
     m_Bottom: 1
   m_ChildAlignment: 0
   m_Spacing: 1
-  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 0
@@ -29020,7 +29020,7 @@ MonoBehaviour:
   musicAudioSource: {fileID: 1239835203}
   campfireSounds: {fileID: 8300000, guid: a2863058d4ac62344893320b0be1aa62, type: 3}
   campfireSource: {fileID: 1239835207}
-  quietAmount: 0.4
+  quietAmount: 0.3
 --- !u!4 &1239835206
 Transform:
   m_ObjectHideFlags: 0
@@ -40587,7 +40587,7 @@ MonoBehaviour:
     m_Bottom: 1
   m_ChildAlignment: 0
   m_Spacing: 1
-  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 0
@@ -40733,6 +40733,8 @@ MonoBehaviour:
   template: {fileID: 983194316}
   lifetime: 0.5
   heatBar: {fileID: 1532594545}
+  campfireMainLight: {fileID: 238786310}
+  campfireBrightLight: {fileID: 1857562378}
 --- !u!114 &1590945789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50351,7 +50353,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.56
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3.1
+  m_Intensity: 3
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 2d3dd7440000000027dc2bf601f917298915f71e
@@ -51210,7 +51212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6d0df92f0df0541971fcf414df2b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StatManager
-  totalPoints: 0
+  totalPoints: 9999999
   basePoints: 1
   multiplier: 1
 --- !u!114 &1941670190
@@ -51227,6 +51229,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HeatManager
   decayRate: 0.07
   baseValue: 0.02
+  pauseTime: 0.1
+  delayTime: 0.02
 --- !u!1 &1945028829
 GameObject:
   m_ObjectHideFlags: 0

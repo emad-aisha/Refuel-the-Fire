@@ -1,6 +1,7 @@
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Rendering.Universal;
 
 public class CurrencyManager : MonoBehaviour {
     public static CurrencyManager instance;
@@ -15,15 +16,27 @@ public class CurrencyManager : MonoBehaviour {
 
     [Header("Heat")]
     [SerializeField] Image heatBar;
+    [SerializeField] Light2D campfireMainLight;
+    [SerializeField] Light2D campfireBrightLight;
+    float ogMainLight;
+    float ogBrightLight;
 
     void Awake() {
         if (instance == null) instance = this;
+
+        ogMainLight = campfireMainLight.intensity;
+        ogBrightLight = campfireBrightLight.intensity;
 
         UpdateHeatBar(1);
         UpdateCurrency((int)StatManager.instance.GetPoints());
     }
 
-    public void UpdateHeatBar(float percentFull) { heatBar.fillAmount = percentFull; }
+    public void UpdateHeatBar(float percentFull) {
+        campfireMainLight.intensity = ogMainLight * percentFull;
+        campfireBrightLight.intensity = ogBrightLight * percentFull;
+
+        heatBar.fillAmount = percentFull;
+    }
     public void UpdateCurrency(float amountOfCurrency) {
         // TODO: make this NOT show decimals once they reach a specific character length of moneys.
 

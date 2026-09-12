@@ -93,7 +93,7 @@ public class Upgrade : MonoBehaviour {
     virtual protected void SetDesc() {
         descText.text = upgradeData.upgradeType switch {
             Type.Heat => "Heat ",
-            Type.Points => "Base Points ",
+            Type.Points => "Money ",
             _ => "N "
         };
         descText.text += upgradeData.upgradeSubtype switch {
