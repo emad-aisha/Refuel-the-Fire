@@ -6,7 +6,6 @@ public class SideBookManager : MonoBehaviour {
 
     [Header("Side Book")]
     [SerializeField] GameObject sideBook;
-    [SerializeField] int moveAmount;
     [SerializeField] float dampTime = 0.5f;
 
     [Header("Tabs")]
@@ -21,23 +20,26 @@ public class SideBookManager : MonoBehaviour {
     [Header("Panels")]
     [SerializeField] GameObject upgradePanel;
     [SerializeField] GameObject progressPanel;
-    Vector3 originalPosition;
-    Vector3 ignoredVelocity;
-    int internalMoveAmount = 0;
+    Vector2 ignoredVelocity;
+    float internalMoveAmount = 0.5f;
+    float originalYPivot;
+
+    RectTransform sideBookTransform;
 
     // SETUP
     void Awake() {
         if (!instance) instance = this;
 
-        originalPosition = sideBook.transform.position;
         baseColor = progressTabs.color;
+        sideBookTransform = sideBook.GetComponent<RectTransform>();
+        originalYPivot = sideBookTransform.pivot.y;
 
         ShowUpgrades();
         CloseSideBook();
     }
 
     void Update() {
-        sideBook.transform.position = Vector3.SmoothDamp(sideBook.transform.position, originalPosition + new Vector3(0, internalMoveAmount), ref ignoredVelocity, dampTime);
+        sideBookTransform.pivot = Vector2.SmoothDamp(sideBookTransform.pivot, new Vector2(0.5f, internalMoveAmount), ref ignoredVelocity, dampTime);
     }
 
 
@@ -45,11 +47,11 @@ public class SideBookManager : MonoBehaviour {
     public void ToggleSideBook() {
         //Vector3.MoveTowards(originalPosition, originalPosition + new Vector3(0, moveAmount), 0.1f);
         //sideBook.transform.position += new Vector3(0, moveAmount);
-        if (internalMoveAmount == 0) internalMoveAmount = moveAmount;
-        else internalMoveAmount = 0;
+        if (internalMoveAmount == originalYPivot) internalMoveAmount = 1;
+        else internalMoveAmount = originalYPivot;
     }
     public void ShowProgress() {
-        if (internalMoveAmount != 0) { ToggleSideBook(); }
+        if (internalMoveAmount != originalYPivot) { ToggleSideBook(); }
 
         upgradeTabs.color = baseColor - new Color(0.1f, 0.1f, 0.1f, 0);
         progressTabs.color = baseColor;
@@ -58,7 +60,7 @@ public class SideBookManager : MonoBehaviour {
         upgradePanel.SetActive(false);
     }
     public void ShowUpgrades() {
-        if (internalMoveAmount != 0) { ToggleSideBook(); }
+        if (internalMoveAmount != originalYPivot) { ToggleSideBook(); }
 
         upgradeTabs.color = baseColor;
         progressTabs.color = baseColor - new Color(0.1f, 0.1f, 0.1f, 0);
@@ -69,7 +71,6 @@ public class SideBookManager : MonoBehaviour {
 
     void CloseSideBook() {
         ToggleSideBook();
-        sideBook.transform.position = originalPosition + new Vector3(0, internalMoveAmount);
     }
 
 
