@@ -74,5 +74,4 @@ public class SideBookManager : MonoBehaviour {
         ToggleSideBook();
     }
 
-
 }

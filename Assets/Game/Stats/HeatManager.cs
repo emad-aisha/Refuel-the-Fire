@@ -14,6 +14,9 @@ public class HeatManager : MonoBehaviour {
     [SerializeField] float pauseTime = 0.1f;
     [SerializeField] float delayTime = 0.1f;
 
+    [SerializeField] GameObject heatObject;
+    [SerializeField] GameObject smokeObject;
+
     float totalHeat = 1; // starts at full
     float multiplier = 1;
 
@@ -66,6 +69,8 @@ public class HeatManager : MonoBehaviour {
     void DeathCheck() {
         if (totalHeat <= 0) {
             Debug.Log("Dead...");
+            heatObject.SetActive(false);
+            smokeObject.SetActive(false);
             OnDeath?.Invoke();
             enabled = false;
         }
