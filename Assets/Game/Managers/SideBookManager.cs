@@ -34,6 +34,7 @@ public class SideBookManager : MonoBehaviour {
         sideBookTransform = sideBook.GetComponent<RectTransform>();
         originalYPivot = sideBookTransform.pivot.y;
 
+        ShowProgress();
         ShowUpgrades();
         CloseSideBook();
     }
