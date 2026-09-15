@@ -26,10 +26,14 @@ public class SettingsManager : MonoBehaviour {
 
     // SOUND
     public void UpdateMusicVolume() {
+        if (gameObject == null) return;
+        if (settingsToUpdate == null) return;
         settingsToUpdate.musicVolume = musicSlider.value / 10;
         AudioManager.instance.UpdateMusicVolume(settingsToUpdate.musicVolume);
     }
     public void UpdateSFXVolume() {
+        if (gameObject == null) return;
+        if (settingsToUpdate == null) return;
         settingsToUpdate.sfxVolume = sfxSlider.value / 10;
     }
 

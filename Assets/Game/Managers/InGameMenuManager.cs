@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class InGameMenuManager : MonoBehaviour {
     [SerializeField] string mainMenu = "Main Menu";
@@ -12,6 +13,10 @@ public class InGameMenuManager : MonoBehaviour {
     [SerializeField] GameObject screen;
     [SerializeField] GameObject credit;
 
+    [Header("Sounds")]
+    [SerializeField] Slider SFXSlider;
+    [SerializeField] Slider MusicSlider;
+
     [Header("Are U Sure")]
     [SerializeField] GameObject AreyouSureObject;
 
@@ -20,6 +25,8 @@ public class InGameMenuManager : MonoBehaviour {
     void Awake() {
         timescale = Time.timeScale;
         savedSettings = FindAnyObjectByType<SavedSettings>();
+        SetVolumes();
+
         HideAreYouSure();
         HideOptionsMenu();
     }
@@ -66,6 +73,12 @@ public class InGameMenuManager : MonoBehaviour {
             case "Credits": credit.SetActive(true); break;
             default: break;
         }
+    }
+
+
+    void SetVolumes() {
+        SFXSlider.value = savedSettings.sfxVolume * 10;
+        MusicSlider.value = savedSettings.musicVolume * 10;
     }
 
 }

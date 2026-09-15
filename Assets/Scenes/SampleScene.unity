@@ -43945,6 +43945,8 @@ MonoBehaviour:
   sounds: {fileID: 18128044}
   screen: {fileID: 518323322}
   credit: {fileID: 2109342733}
+  SFXSlider: {fileID: 1534471232}
+  MusicSlider: {fileID: 859655660}
   AreyouSureObject: {fileID: 2003405712}
 --- !u!114 &1590945790
 MonoBehaviour:
