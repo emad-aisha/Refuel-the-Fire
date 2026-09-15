@@ -10,7 +10,7 @@ public class ProgressionChecker : MonoBehaviour {
     void LateUpdate() {
         if (totalUpgrades == -1) return;
 
-        Debug.Log("total: " + totalUpgrades);
+        //Debug.Log("total: " + totalUpgrades);
 
         if (FinishedGame()) {
             HeatManager.instance.enabled = false;

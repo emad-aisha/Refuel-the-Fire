@@ -39,7 +39,7 @@ public class Progress : Upgrade {
     protected override void UpdateData() {
         base.UpdateData();
         internalIndex++;
-        if (objects[internalIndex] != null) increment?.Invoke();
+        if (internalIndex < objects.Count) increment?.Invoke();
     }
 
 

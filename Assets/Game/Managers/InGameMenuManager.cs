@@ -12,11 +12,15 @@ public class InGameMenuManager : MonoBehaviour {
     [SerializeField] GameObject screen;
     [SerializeField] GameObject credit;
 
+    [Header("Are U Sure")]
+    [SerializeField] GameObject AreyouSureObject;
+
     float timescale;
 
     void Awake() {
         timescale = Time.timeScale;
         savedSettings = FindAnyObjectByType<SavedSettings>();
+        HideAreYouSure();
         HideOptionsMenu();
     }
 
@@ -42,6 +46,10 @@ public class InGameMenuManager : MonoBehaviour {
     public void ShowCredits() { ShowMenu("Credits"); }
     public void ShowOptions() { ShowMenu("Options"); }
 
+    public void ShowAreYouSure() { Time.timeScale = 0; AreyouSureObject.SetActive(true); }
+    public void HideAreYouSure() { Time.timeScale = timescale; AreyouSureObject.SetActive(false); }
+
+    public void ResetTime() { Time.timeScale = timescale; }
 
     void ShowMenu(string title = "") {
         if (title == "") optionsMenu.SetActive(false);
