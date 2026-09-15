@@ -18,4 +18,4 @@ MonoBehaviour:
   cost: 1500
   title: Logs
   description: 
-  nextUpgrade: {fileID: 11400000, guid: b8c0132e3a335de48b2fcd09b73267d5, type: 2}
+  nextUpgrade: {fileID: 0}

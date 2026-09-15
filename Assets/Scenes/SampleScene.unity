@@ -31181,7 +31181,7 @@ MonoBehaviour:
   musicAudioSource: {fileID: 1239835203}
   campfireSounds: {fileID: 8300000, guid: a2863058d4ac62344893320b0be1aa62, type: 3}
   campfireSource: {fileID: 1239835207}
-  quietAmount: 0.3
+  quietAmount: 0.5
 --- !u!4 &1239835206
 Transform:
   m_ObjectHideFlags: 0
@@ -55127,7 +55127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6d0df92f0df0541971fcf414df2b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StatManager
-  totalPoints: 1000000
+  totalPoints: 0
   basePoints: 1
   multiplier: 1
 --- !u!114 &1941670190
